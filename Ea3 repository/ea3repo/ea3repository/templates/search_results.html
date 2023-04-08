@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Search results</h1>
+  <ul>
+    {% for artifact in artifacts %}
+      <li>{{ artifact.name }} - {{ artifact.description }}</li>
+    {% empty %}
+      <li>No artifacts found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
